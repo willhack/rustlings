@@ -8,16 +8,13 @@
 
 // I AM DONE
 
+#[test]
 fn main() {
-    let vec0 = Vec::new();
+    let vec0 = vec![22, 44, 66];
 
     let mut vec1 = fill_vec(vec0);
 
-    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
-
-    vec1.push(88);
-
-    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+    assert_eq!(vec1, vec![22, 44, 66, 88]);
 }
 
 fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
